@@ -16,7 +16,7 @@ Oct 5, 2017
   - creating and editing `YML` configuration files
 1. Run the slides [locally](http://localhost:8081/):
   ```
-  $ git clone https://github.com/marcandrews/docker-workshop.git
+  $ git clone https://github.com/marcandrews/docker-workshop-1-slides.git
   $ npm install
   $ npm start
   ```
