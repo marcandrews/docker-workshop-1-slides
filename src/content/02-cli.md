@@ -99,7 +99,7 @@ Notes:
   - <!-- .element: class="fragment" data-fragment-index="1" --> `docker ps` to see a list of running containers
   - <!-- .element: class="fragment" data-fragment-index="1" --> `docker stop` to stop a container that is running in the background
 
-- <!-- .element: class="fragment" data-fragment-index="2" --> Another important command is
+- <!-- .element: class="fragment" data-fragment-index="2" --> Other important commands include
   - <!-- .element: class="fragment" data-fragment-index="2" --> `docker logs -f` to stream logs from running containers
   - <!-- .element: class="fragment" data-fragment-index="2" --> `docker image ls` to see a list of Docker images that you've built
 
