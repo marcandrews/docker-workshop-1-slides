@@ -1,5 +1,5 @@
 // CSS imports
-import 'reveal.js/css/theme/moon.css';
+import 'reveal.js/css/theme/beige.css';
 
 // JS imports
 import './js/config';
