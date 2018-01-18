@@ -76,7 +76,7 @@ Notes:
 
 ## `docker exec`
 
-- With the container ID hash listed in $ docker ps, we access a container running in the background with:
+- With the container ID hash listed in $ docker ps, we access a container running in the background with
   ```
   $ docker exec -it fd4d2604ba9d bash
   root@fd4d2604ba9d:/#
@@ -85,6 +85,9 @@ Notes:
   ```
   $ docker stop fd4d2604ba9d
   ```
+
+Notes:
+- In case you need to debug a running container, this is when a familiar container environment will be handy.
 
 ---
 

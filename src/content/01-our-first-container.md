@@ -20,9 +20,15 @@
 
 Notes:
 - `CMD`
-  - Basically tells Docker to run this when executing this container
+  - Instructs Docker to run this when executing this container
   - This will be expanded upon later
+- Hub
+  - Like NPM, but for Docker images
+  - Can sometimes be helpful to take a peek and the Dockerfiles used by images.
 - Ubuntu
+  - Debug in a familiar, well-supported environment
+  - Easy to install depenencies (imagemagick, etc.)
   - If you're more comfortable with, or using another Linux distro in production, use that instead
+  - Emulate a production environment (Alpine, CoreOS, etc.)
   - Although the goal of this workshop is to familarize ourselves with Docker and ease development concerns, the ultimate goal of using Docker is to use it for deployment (i.e. deploy containers to production).
-  - Until our application is completely _Dockerized_, stick to Ubuntu/Debian rather than Node
+  - Until our application is completely _Dockerized_ (i.e. no weird dependencies), stick to Ubuntu/Debian rather than Node

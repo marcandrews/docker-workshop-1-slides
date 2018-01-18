@@ -16,6 +16,9 @@
 
 - <!-- .element: class="fragment" --> Does Docker address some concerns with working with distributed applications?
 
+Notes:
+- Under what conditions would we not want to use Docker?
+
 +++
 
 ## Concerns when developing distributed services
