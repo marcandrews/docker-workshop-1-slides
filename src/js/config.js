@@ -1,4 +1,19 @@
-var libPath = '../node_modules/reveal.js/';
+import Reveal from 'reveal.js/js/reveal';
+import 'reveal.js/lib/js/head.min';
+
+import classListUrl from 'reveal.js/lib/js/classList.js'
+
+import notesUrl from 'reveal.js/plugin/notes/notes';
+import 'reveal.js/plugin/notes/notes.html';
+
+import zoomUrl from 'reveal.js/plugin/zoom-js/zoom';
+
+import markedUrl from 'reveal.js/plugin/markdown/marked.js';
+
+import markdownUrl from 'reveal.js/plugin/markdown/markdown.js';
+
+import highlightUrl from 'reveal.js/plugin/highlight/highlight.js';
+
 
 Reveal.initialize({
   center: false,
@@ -12,22 +27,34 @@ Reveal.initialize({
   dependencies: [
     // Cross-browser shim that fully implements classList
     {
-      src: libPath + 'lib/js/classList.js',
+      src: classListUrl,
       condition: function() {
         return !document.body.classList;
       }
     },
 
+    // Speaker notes
+    {
+      src: notesUrl,
+      async: true
+    },
+
+    // Zoom in and out with Alt+click
+    {
+      src: zoomUrl,
+      async: true,
+    },
+
     // Interpret Markdown in <section> elements
     {
-      src: libPath + 'plugin/markdown/marked.js',
+      src: markedUrl,
       condition: function() {
         return !!document.querySelector( '[data-markdown]' );
       }
     },
 
     {
-      src: libPath + 'plugin/markdown/markdown.js',
+      src: markdownUrl,
       condition: function() {
         return !!document.querySelector( '[data-markdown]' );
       }
@@ -35,17 +62,11 @@ Reveal.initialize({
 
     // Syntax highlight for <code> elements
     {
-      src: libPath + 'plugin/highlight/highlight.js',
+      src: highlightUrl,
       async: true,
       callback: function() {
         hljs.initHighlightingOnLoad();
       }
     },
-
-    // Zoom in and out with Alt+click
-    { src: libPath + 'plugin/zoom-js/zoom.js', async: true },
-
-    // Speaker notes
-    { src: libPath + 'plugin/notes/notes.js', async: true }
   ]
 });

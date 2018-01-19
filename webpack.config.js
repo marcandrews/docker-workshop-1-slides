@@ -9,11 +9,22 @@ module.exports = {
     app: './src/main.js',
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'docs'),
     filename: '[name].[hash].js'
+  },
+  resolve: {
+    modules: ['./node_modules']
   },
   module: {
     loaders: [
+      {
+        test: /reveal\.js\/plugin\/.*\.js$/,
+        loader: 'file-loader?name=[path][name].[ext]'
+      },
+      {
+        test: /reveal\.js\/plugin\/.*\.html$/,
+        loader: 'file-loader?name=[path][name].[ext]'
+      },
       {
         test: /\.scss$/,
         loaders: ['style-loader', 'css-loader', 'sass-loader']
