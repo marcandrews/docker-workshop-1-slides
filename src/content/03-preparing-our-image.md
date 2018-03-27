@@ -51,7 +51,7 @@ Notes:
     software-properties-common \
     libssl-dev \
     build-essential \
-    software-properties-common
+    software-properties-common \
     curl \
     wget \
     git \
