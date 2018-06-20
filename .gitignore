@@ -30,7 +30,7 @@ bower_components
 .lock-wscript
 
 # Build
-dist
+# dist
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
@@ -59,3 +59,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# Tooling
+.vscode

@@ -1,7 +1,8 @@
-# Preparing our image for our application
+# Preparing our app
 
 - Our first step is to instruct Docker to update Ubuntu's source list and install any application dependencies
 - We do this with a `RUN` instruction:
+
   ```
   FROM ubuntu:16.04
 
@@ -14,7 +15,7 @@
     curl \
     wget \
     git \
-
+    \
     # Clean up
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -22,26 +23,28 @@
   ```
 
 Notes:
+
 - If you have experience with bash, this will look familiar
 - This is a good starting point, but your application may require additional dependencies - maybe Java (default-jre) or imagemagick (imagemagick)
   - This is another reason to use Ubuntu (and not Node) when starting with Docker
     - Installing non-NPM dependencies
     - Installing debugging tools
-    - Installing production dependencies (i.e. nginx) 
+    - Installing production dependencies (i.e. nginx)
 
 +++
 
 ## Three important concepts about `RUN`
 
-1. Each instruction runs "on-top" the previous instruction, akin to opening up a new shell
-1. Each instruction is cached
-1. Some things, like environment variables defined with export do not get passed from the previous instruction
+1.  Each instruction runs "on-top" the previous instruction, akin to opening up a new shell
+1.  Each instruction is cached
+1.  Some things, like environment variables defined with export do not get passed from the previous instruction
 
 +++
 
 ## Installing Node
 
 - Next, we will use [n](https://github.com/tj/n) to install Node and any global dependencies we may need:
+
   ```
   FROM ubuntu:16.04
 
@@ -55,7 +58,7 @@ Notes:
     curl \
     wget \
     git \
-
+    \
     # Clean up
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
@@ -71,6 +74,7 @@ Notes:
   ```
 
 Notes:
+
 - Note how we chain the Node installation process into a single `RUN` instruction
 - If you separate the installation into multiple RUN instructions, you cannot guarantee that information, such as environment variables, set in a previous instruction, will be available in subsequent instructions
 - For this reason, components should be installed via a single `RUN` instruction
@@ -87,6 +91,7 @@ Notes:
   Successfully built $HASH
   ```
 - Run the container we just built and confirm that our dependencies are present:
+
   ```
   $ docker run -it my-first-container
   root@9d5a58262544:/# git --version

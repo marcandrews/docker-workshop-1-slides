@@ -1,51 +1,50 @@
-var libPath = '../node_modules/reveal.js/';
+const dependencies = [
+  { src: "//cdn.socket.io/socket.io-1.3.5.js", async: true }
+];
+
+if (process.env.REVEAL_JS_SECRET) {
+  dependencies.push({
+    src: "vendor/reveal.js/plugin/multiplex/master.js",
+    async: true
+  });
+  dependencies.push({
+    src: "vendor/reveal.js/plugin/notes/notes.js",
+    async: true
+  });
+} else {
+  dependencies.push({
+    src: "vendor/reveal.js/plugin/multiplex/client.js",
+    async: true
+  });
+}
 
 Reveal.initialize({
   center: false,
   controls: true,
   history: true,
   previewLinks: true,
-  width: '100%',
-  height: '100%',
-  margin: 0.05,
+
+  // The "normal" size of the presentation, aspect ratio will be preserved
+  // when the presentation is scaled to fit different resolutions. Can be
+  // specified using percentage units.
+  width: 1600,
+  height: 900,
+
+  // Factor of the display size that should remain empty around the content
+  margin: 0.1,
+
+  // Bounds for smallest/largest possible scale to apply to content
+  minScale: 0.2,
+  maxScale: 1.5,
+
   slideNumber: true,
-  dependencies: [
-    // Cross-browser shim that fully implements classList
-    {
-      src: libPath + 'lib/js/classList.js',
-      condition: function() {
-        return !document.body.classList;
-      }
-    },
+  transition: "concave",
 
-    // Interpret Markdown in <section> elements
-    {
-      src: libPath + 'plugin/markdown/marked.js',
-      condition: function() {
-        return !!document.querySelector( '[data-markdown]' );
-      }
-    },
+  multiplex: {
+    secret: process.env.REVEAL_JS_SECRET,
+    id: "07d081935af260a2",
+    url: "https://reveal-js-multiplex-ccjbegmaii.now.sh"
+  },
 
-    {
-      src: libPath + 'plugin/markdown/markdown.js',
-      condition: function() {
-        return !!document.querySelector( '[data-markdown]' );
-      }
-    },
-
-    // Syntax highlight for <code> elements
-    {
-      src: libPath + 'plugin/highlight/highlight.js',
-      async: true,
-      callback: function() {
-        hljs.initHighlightingOnLoad();
-      }
-    },
-
-    // Zoom in and out with Alt+click
-    { src: libPath + 'plugin/zoom-js/zoom.js', async: true },
-
-    // Speaker notes
-    { src: libPath + 'plugin/notes/notes.js', async: true }
-  ]
+  dependencies: dependencies
 });
