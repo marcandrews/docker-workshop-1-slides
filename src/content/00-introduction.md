@@ -4,7 +4,7 @@
 
 Marc Andrews
 
-June 21, 2018
+August 14, 2018
 
 +++
 
@@ -17,7 +17,7 @@ June 21, 2018
     - `git`
     - creating and editing `yaml` configuration files
 
-1.  Run the slides [locally](https://marcandrews.github.io/docker-workshop-1-slides) or [deploy](https://github.com/marcandrews/docker-workshop-1-slides) slides locally:
+1.  Run the slides [locally](https://marcandrews.github.io/docker-workshop-1-slides) ([https://goo.gl/y4Lu3j](https://goo.gl/y4Lu3j)) or [deploy](https://github.com/marcandrews/docker-workshop-1-slides) slides locally:
     ```
     $ git clone https://github.com/marcandrews/docker-workshop-1-slides.git
     $ npm install
