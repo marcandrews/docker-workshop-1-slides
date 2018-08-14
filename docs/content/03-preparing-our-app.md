@@ -49,18 +49,7 @@ Notes:
   FROM ubuntu:16.04
 
   # Update source list
-  RUN apt-get update && apt-get install -y -qq --no-install-recommends \
-    # Install dependencies
-    software-properties-common \
-    libssl-dev \
-    build-essential \
-    software-properties-common \
-    curl \
-    wget \
-    git \
-    \
-    # Clean up
-    && apt-get clean && rm -rf /var/lib/apt/lists/*
+  RUN ...
 
   # Install Node
   RUN dir=`mktemp -d` \

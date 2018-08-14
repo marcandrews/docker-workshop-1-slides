@@ -84,13 +84,7 @@ Notes:
 
     # backend API on port 3000
     api:
-      build: .
-      ports:
-        - "3000:3000"
-      volumes:
-        - ./api:/app
-      working_dir: /app
-      command: npm start
+      ...
 
     # frontend on port 8080
     frontend:
