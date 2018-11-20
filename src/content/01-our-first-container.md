@@ -46,10 +46,10 @@ Notes:
 
 ## Security
 
-- Backdoored images
+- Backdoored images on [Docker Hub](https://hub.docker.com/)
   - [_Cryptojacking invades cloud. How modern containerization trend is exploited by attackers_](https://kromtech.com/blog/security-center/cryptojacking-invades-cloud-how-modern-containerization-trend-is-exploited-by-attackers) ~ Kromtech
   - [_Backdoored images downloaded 5 million times finally removed from Docker Hub_](https://arstechnica.com/information-technology/2018/06/backdoored-images-downloaded-5-million-times-finally-removed-from-docker-hub/) ~ Ars Technica
-  - malware that mined over $90,000 worth of digital coin
+  - malware that mined over \$90,000 worth of digital coin
 
 +++
 

@@ -17,10 +17,6 @@
 
 - <!-- .element: class="fragment" --> Does Docker address some concerns with working with distributed applications?
 
-Notes:
-
-- Under what conditions would we not want to use Docker?
-
 +++
 
 ## Concerns with distributed services
@@ -43,3 +39,4 @@ Notes:
 - Containers are immutable
   - Kagen Air once took 3 days to onboard; with Docker: 30 minutes
   - Build order: SASS was being compiled after the application was built; so every time a developer was on-boarded, they encountered this error, but subsequent builds worked
+- Under what conditions would we not want to use Docker?
