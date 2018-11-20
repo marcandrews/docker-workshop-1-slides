@@ -4,13 +4,13 @@
 
 Marc Andrews
 
-August 14, 2018
+November 20, 2018
 
 +++
 
-## Prerequisites
+## Getting Started with Docker
 
-1.  Install [Docker](https://docs.docker.com/engine/installation/)
+1.  Install [Docker](https://docs.docker.com/engine/installation/) ([Mac OS download](https://download.docker.com/mac/stable/Docker.dmg) without signing up)
 1.  Familiarity with:
 
     - running commands in a terminal and bash

@@ -48,6 +48,7 @@ Notes:
 
 Notes:
 
+- Most images will have `/bin/bash` as the default execution context.
 - We can try a few things to confirm that we are running Ubuntu:
   - `root@07b0a5c8a53b:/# cat /etc/lsb-release`
   - `root@07b0a5c8a53b:/# apt list --installed`
